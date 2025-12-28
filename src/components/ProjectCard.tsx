@@ -14,10 +14,7 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ title, description, links, note }: ProjectCardProps) => {
   return (
-    <div className="group min-w-[320px] max-w-[380px] flex-shrink-0 rounded-xl border border-border 
-                    bg-gradient-card p-6 shadow-soft
-                    transition-all duration-300 ease-out
-                    hover:border-primary/30 hover:shadow-card hover:-translate-y-1">
+    <div className="group min-w-[320px] max-w-[380px] flex-shrink-0 puzzle-card p-6 shadow-soft">
       <h4 className="font-display text-xl font-semibold text-foreground mb-3 
                      transition-colors duration-300 group-hover:text-primary">
         {title}

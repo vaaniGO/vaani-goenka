@@ -4,6 +4,75 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Puzzle grid background pattern */
+.puzzle-grid-bg {
+  position: relative;
+  background-image: 
+    linear-gradient(to right, hsl(var(--primary) / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--primary) / 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.puzzle-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20 Q48 20 48 28 Q48 36 40 36 M40 44 Q32 44 32 52 Q32 60 40 60 M20 40 Q20 32 28 32 Q36 32 36 40 M60 40 Q60 48 52 48 Q44 48 44 40' stroke='%236DC3BB' stroke-width='0.8' fill='none' opacity='0.12'/%3E%3C/svg%3E");
+  background-size: 80px 80px;
+  pointer-events: none;
+}
+
+/* Puzzle piece card styling */
+.puzzle-card {
+  position: relative;
+  background: var(--gradient-card);
+  border: 2px solid hsl(var(--primary) / 0.35);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.puzzle-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 24px;
+  background: hsl(var(--primary) / 0.15);
+  border: 2px solid hsl(var(--primary) / 0.35);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  transition: all 0.3s ease;
+}
+
+.puzzle-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 24px;
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--primary) / 0.35);
+  border-right: none;
+  border-radius: 12px 0 0 12px;
+  transition: all 0.3s ease;
+}
+
+.puzzle-card:hover {
+  border-color: hsl(var(--primary) / 0.6);
+  transform: translateY(-4px);
+}
+
+.puzzle-card:hover::before,
+.puzzle-card:hover::after {
+  border-color: hsl(var(--primary) / 0.6);
+}
+
+
+
 /* Vaani Goenka Portfolio Design System
    Primary: Teal #6DC3BB (169 43% 59%)
    Secondary: Deep Indigo #393D7E (236 36% 36%)
