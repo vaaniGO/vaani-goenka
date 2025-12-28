@@ -18,13 +18,18 @@ const InterestTag = ({ title, content }: InterestTagProps) => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="group relative px-5 py-2.5 rounded-full border border-primary/30 bg-card 
+        className="group relative px-5 py-2.5 rounded-full border border-primary/40 bg-primary/5 
                    font-body text-sm font-medium text-foreground
-                   transition-all duration-300 ease-out
-                   hover:border-primary hover:bg-primary/10 hover:shadow-soft
+                   transition-all duration-300 ease-out cursor-pointer
+                   hover:border-primary hover:bg-primary/15 hover:shadow-soft hover:scale-105
                    focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-background"
       >
-        <span className="relative z-10">{title}</span>
+        <span className="relative z-10 flex items-center gap-2">
+          {title}
+          <svg className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
         <span className="absolute inset-0 rounded-full bg-primary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </button>
 
