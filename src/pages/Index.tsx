@@ -14,17 +14,13 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-hero">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        </div>
-        <div className="container max-w-5xl mx-auto px-6 py-24 md:py-32 relative z-10">
+      <section className="h-[180px] flex items-center">
+        <div className="container max-w-5xl mx-auto px-6">
           <div className="max-w-3xl animate-slide-up">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 leading-tight">
               Vaani Goenka
             </h1>
-            <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
               Undergraduate student at{' '}
               <span className="text-primary font-medium">Ashoka University</span>
               , exploring the intersections of formal methods, logic, and mathematical reasoning in computer science.
