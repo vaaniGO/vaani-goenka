@@ -4,6 +4,7 @@ import Section from '@/components/Section';
 import InterestTag from '@/components/InterestTag';
 import CardSlider from '@/components/CardSlider';
 import BlogCard from '@/components/BlogCard';
+import PuzzleGrid from '@/components/PuzzleGrid';
 import { interests } from '@/data/interests';
 import { recentProjects, previousProjects, developmentProjects } from '@/data/projects';
 import { blogPosts } from '@/data/blogPosts';
@@ -11,6 +12,7 @@ import { blogPosts } from '@/data/blogPosts';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background puzzle-grid-bg">
+      <PuzzleGrid />
       <Header />
       
       {/* Hero Section */}
