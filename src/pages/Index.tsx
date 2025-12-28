@@ -1,12 +1,90 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Section from '@/components/Section';
+import InterestTag from '@/components/InterestTag';
+import CardSlider from '@/components/CardSlider';
+import BlogCard from '@/components/BlogCard';
+import { interests } from '@/data/interests';
+import { recentProjects, previousProjects, developmentProjects } from '@/data/projects';
+import { blogPosts } from '@/data/blogPosts';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-hero">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        </div>
+        <div className="container max-w-5xl mx-auto px-6 py-24 md:py-32 relative z-10">
+          <div className="max-w-3xl animate-slide-up">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+              Vaani Goenka
+            </h1>
+            <p className="font-body text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Undergraduate student at{' '}
+              <span className="text-primary font-medium">Ashoka University</span>
+              , exploring the intersections of formal methods, logic, and mathematical reasoning in computer science.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Interests Section */}
+      <Section id="interests">
+        <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
+          Interests
+        </h2>
+        <div className="flex flex-wrap gap-3">
+          {interests.map((interest, index) => (
+            <div 
+              key={interest.title}
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <InterestTag title={interest.title} content={interest.content} />
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Projects Section */}
+      <div id="projects" className="bg-gradient-subtle">
+        <Section>
+          <CardSlider title="Recently, I have been working on" projects={recentProjects} />
+        </Section>
+
+        <Section>
+          <CardSlider title="Previously, I have worked on" projects={previousProjects} />
+        </Section>
+
+        <Section>
+          <CardSlider title="Development Projects" projects={developmentProjects} />
+        </Section>
       </div>
+
+      {/* Blog Section */}
+      <Section id="blog">
+        <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
+          Recently, I have been thinking about
+        </h2>
+        <div className="grid gap-4 max-w-2xl">
+          {blogPosts.map((post) => (
+            <BlogCard
+              key={post.slug}
+              slug={post.slug}
+              title={post.title}
+              excerpt={post.excerpt}
+              date={post.date}
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Footer />
     </div>
   );
 };
