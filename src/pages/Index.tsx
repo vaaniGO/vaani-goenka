@@ -10,7 +10,7 @@ import { blogPosts } from '@/data/blogPosts';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background puzzle-grid-bg">
       <Header />
       
       {/* Hero Section */}
