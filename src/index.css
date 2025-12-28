@@ -4,62 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Puzzle grid background pattern */
-.puzzle-grid-bg {
-  position: relative;
-}
-
-/* Puzzle piece card styling */
-.puzzle-card {
-  position: relative;
-  background: var(--gradient-card);
-  border: 2px solid hsl(var(--primary) / 0.35);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.puzzle-card::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -8px;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 24px;
-  background: hsl(var(--primary) / 0.15);
-  border: 2px solid hsl(var(--primary) / 0.35);
-  border-left: none;
-  border-radius: 0 12px 12px 0;
-  transition: all 0.3s ease;
-}
-
-.puzzle-card::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -8px;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 24px;
-  background: hsl(var(--card));
-  border: 2px solid hsl(var(--primary) / 0.35);
-  border-right: none;
-  border-radius: 12px 0 0 12px;
-  transition: all 0.3s ease;
-}
-
-.puzzle-card:hover {
-  border-color: hsl(var(--primary) / 0.6);
-  transform: translateY(-4px);
-}
-
-.puzzle-card:hover::before,
-.puzzle-card:hover::after {
-  border-color: hsl(var(--primary) / 0.6);
-}
-
-
-
 /* Vaani Goenka Portfolio Design System
    Primary: Teal #6DC3BB (169 43% 59%)
    Secondary: Deep Indigo #393D7E (236 36% 36%)
