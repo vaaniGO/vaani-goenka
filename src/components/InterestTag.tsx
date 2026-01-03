@@ -38,9 +38,11 @@ const InterestTag = ({ title, content }: InterestTagProps) => {
           <DialogHeader>
             <DialogTitle className="font-display text-2xl text-foreground">{title}</DialogTitle>
           </DialogHeader>
-          <div className="mt-4 font-body text-foreground/85 leading-relaxed whitespace-pre-wrap">
-            {content}
-          </div>
+          <div
+            className="mt-4 font-body text-foreground/85 leading-relaxed whitespace-pre-wrap
+                       [&_a]:text-primary [&_a]:underline [&_a]:hover:text-primary/80 [&_a]:transition-colors"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </DialogContent>
       </Dialog>
     </>

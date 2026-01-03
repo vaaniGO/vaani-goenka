@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
@@ -6,25 +7,37 @@ import CardSlider from '@/components/CardSlider';
 import BlogCard from '@/components/BlogCard';
 import { interests } from '@/data/interests';
 import { recentProjects, previousProjects, developmentProjects } from '@/data/projects';
-import { blogPosts } from '@/data/blogPosts';
+import { getAllPosts, type BlogPost } from '@/client/queries';
 
 const Index = () => {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    getAllPosts()
+      .then(setBlogPosts)
+      .catch((err) => console.error('Error fetching posts:', err));
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="h-[180px] flex items-center">
+      <section className="py-16 md:py-20">
         <div className="container max-w-5xl mx-auto px-6">
           <div className="max-w-3xl animate-slide-up">
+            <img
+              src="/profile.png"
+              alt="Vaani Goenka"
+              className="w-48 h-58 md:w-56 md:h-66 object-cover mb-6"
+            />
             <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 leading-tight">
               Vaani Goenka
             </h1>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed">
-              Undergraduate student at{' '}
-              <span className="text-primary font-medium">Ashoka University</span>
-              , exploring the intersections of formal methods, logic, and mathematical reasoning in computer science.
+            <p>
+              Undergraduate student at Ashoka University
             </p>
+            <p className="font-body text-base text-muted-foreground leading-relaxed">Computer Science & Mathematics</p>
           </div>
         </div>
       </section>
@@ -36,7 +49,7 @@ const Index = () => {
         </h2>
         <div className="flex flex-wrap gap-3">
           {interests.map((interest, index) => (
-            <div 
+            <div
               key={interest.title}
               className="animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -48,9 +61,9 @@ const Index = () => {
       </Section>
 
       {/* Projects Section */}
-      <div id="projects" className="bg-gradient-subtle">
+      <div id="projects">
         <Section>
-          <CardSlider title="Recently, I have been working on" projects={recentProjects} />
+          <CardSlider title="I am currently working on" projects={recentProjects} />
         </Section>
 
         <Section>
@@ -70,11 +83,14 @@ const Index = () => {
         <div className="grid gap-4 max-w-2xl">
           {blogPosts.map((post) => (
             <BlogCard
-              key={post.slug}
-              slug={post.slug}
+              key={post._id}
+              slug={post.slug.current}
               title={post.title}
               excerpt={post.excerpt}
-              date={post.date}
+              date={new Date(post.publishedAt).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long'
+              })}
             />
           ))}
         </div>

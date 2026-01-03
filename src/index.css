@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Vaani Goenka Portfolio Design System
-   Primary: Teal #6DC3BB (169 43% 59%)
+   Primary: Blue #6496B1 (201 33% 54%)
    Secondary: Deep Indigo #393D7E (236 36% 36%)
    Background: Warm off-white, Dark gray for dark mode
 */
@@ -21,13 +21,13 @@
     --popover: 40 25% 99%;
     --popover-foreground: 236 30% 20%;
 
-    --primary: 169 43% 59%;
+    --primary: 201 33% 54%;
     --primary-foreground: 236 36% 20%;
 
     --secondary: 236 36% 36%;
     --secondary-foreground: 40 20% 97%;
 
-    --muted: 169 20% 92%;
+    --muted: 201 20% 92%;
     --muted-foreground: 236 20% 45%;
 
     --accent: 236 36% 36%;
@@ -36,34 +36,33 @@
     --destructive: 0 72% 51%;
     --destructive-foreground: 40 20% 97%;
 
-    --border: 169 25% 85%;
-    --input: 169 25% 85%;
-    --ring: 169 43% 59%;
+    --border: 201 25% 85%;
+    --input: 201 25% 85%;
+    --ring: 201 33% 54%;
 
     --radius: 0.625rem;
 
     /* Custom tokens */
-    --teal: 169 43% 59%;
-    --teal-light: 169 43% 75%;
-    --teal-dark: 169 43% 45%;
+    --teal: 201 33% 54%;
+    --teal-light: 201 33% 70%;
+    --teal-dark: 201 33% 40%;
     --indigo: 236 36% 36%;
     --indigo-light: 236 36% 50%;
     --indigo-dark: 236 36% 25%;
-    
+
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(169 43% 59% / 0.15), hsl(236 36% 36% / 0.1));
-    --gradient-card: linear-gradient(180deg, hsl(40 25% 99%), hsl(169 20% 97%));
-    --gradient-accent: linear-gradient(135deg, hsl(169 43% 59%), hsl(236 36% 36%));
+    --gradient-hero: linear-gradient(135deg, hsl(201 33% 54% / 0.15), hsl(236 36% 36% / 0.1));
+    --gradient-card: linear-gradient(180deg, hsl(40 25% 99%), hsl(201 20% 97%));
+    --gradient-accent: linear-gradient(135deg, hsl(201 33% 54%), hsl(236 36% 36%));
     --gradient-subtle: linear-gradient(180deg, hsl(40 20% 97%), hsl(40 15% 94%));
-    
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(236 36% 36% / 0.08);
     --shadow-card: 0 8px 32px -8px hsl(236 36% 36% / 0.12);
-    --shadow-glow: 0 0 40px hsl(169 43% 59% / 0.2);
-    
-    /* Typography */
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Source Sans 3', system-ui, sans-serif;
+    --shadow-glow: 0 0 40px hsl(201 33% 54% / 0.2);
+
+    --font-display: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
   }
 
   .dark {
@@ -76,16 +75,16 @@
     --popover: 236 28% 14%;
     --popover-foreground: 40 15% 92%;
 
-    --primary: 169 43% 59%;
+    --primary: 201 33% 54%;
     --primary-foreground: 236 36% 15%;
 
-    --secondary: 169 30% 25%;
+    --secondary: 201 30% 25%;
     --secondary-foreground: 40 15% 92%;
 
     --muted: 236 25% 18%;
-    --muted-foreground: 169 15% 65%;
+    --muted-foreground: 201 15% 65%;
 
-    --accent: 169 43% 59%;
+    --accent: 201 33% 54%;
     --accent-foreground: 236 36% 15%;
 
     --destructive: 0 62% 45%;
@@ -93,16 +92,16 @@
 
     --border: 236 25% 22%;
     --input: 236 25% 22%;
-    --ring: 169 43% 59%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(169 43% 59% / 0.1), hsl(236 36% 36% / 0.2));
+    --ring: 201 33% 54%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(201 33% 54% / 0.1), hsl(236 36% 36% / 0.2));
     --gradient-card: linear-gradient(180deg, hsl(236 28% 14%), hsl(236 28% 16%));
-    --gradient-accent: linear-gradient(135deg, hsl(169 43% 50%), hsl(236 36% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(201 33% 50%), hsl(236 36% 45%));
     --gradient-subtle: linear-gradient(180deg, hsl(236 30% 10%), hsl(236 28% 12%));
-    
+
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px hsl(169 43% 59% / 0.15);
+    --shadow-glow: 0 0 40px hsl(201 33% 54% / 0.15);
   }
 }
 
@@ -120,7 +119,12 @@
     font-family: var(--font-body);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-display);
     @apply font-semibold tracking-tight;
   }
@@ -131,75 +135,82 @@
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-accent);
   }
-  
+
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .bg-gradient-card {
     background: var(--gradient-card);
   }
-  
+
   .bg-gradient-subtle {
     background: var(--gradient-subtle);
   }
-  
+
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
-  
+
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
-  
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-in-left {
     animation: slideInLeft 0.5s ease-out forwards;
   }
-  
+
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
-  
+
   @keyframes slideUp {
-    from { 
+    from {
       opacity: 0;
       transform: translateY(20px);
     }
-    to { 
+
+    to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-  
+
   @keyframes slideInLeft {
     from {
       opacity: 0;
       transform: translateX(-20px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
     }
   }
-  
+
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }

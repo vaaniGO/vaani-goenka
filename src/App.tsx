@@ -7,12 +7,14 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import { GridBackground } from './components/GridBackground';
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <GridBackground />
       <Toaster />
       <Sonner />
       <BrowserRouter>

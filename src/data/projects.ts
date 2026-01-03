@@ -3,11 +3,6 @@ export const recentProjects = [
     title: "BOOP: A tool for writing correct-by-construction programs",
     description: "Your code can work, but what does it mean for your code to be correct? I explore this question in a pedagogical context in my research with Prof. Aalok Thakkar. Conventional CS education relies on student-authored programs as proxy for their computational thinking. We attempt to strip these proxies, providing learners with a better way of constructing their programs, prioritising correctness and mathematical reasoning.",
     links: []
-  },
-  {
-    title: "Formal Modelling of ORAN Networks",
-    description: "Under Prof. Sumana Ghosh, Indian Statistical Institute, I have worked on formally modelling an ORAN network, and applied SAT-solving techniques for anomaly detection. Moreover, we create an end-to-end mitigation pipeline that uses machine learning techniques to be adaptive.",
-    links: []
   }
 ];
 
