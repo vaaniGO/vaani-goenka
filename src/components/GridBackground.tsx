@@ -6,7 +6,7 @@ export function GridBackground() {
                 className="hidden lg:block fixed top-0 left-0 h-full pointer-events-none z-0"
                 style={{
                     width: 'max(0px, calc((100vw - 1072px) / 2))',
-                    backgroundImage: 'url(/img-1.jpeg)',
+                    backgroundImage: `url(${import.meta.env.BASE_URL}img-1.jpeg)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
@@ -19,7 +19,7 @@ export function GridBackground() {
                 className="hidden lg:block fixed top-0 right-0 h-full pointer-events-none z-0"
                 style={{
                     width: 'max(0px, calc((100vw - 1072px) / 2))',
-                    backgroundImage: 'url(/img-1.jpeg)',
+                    backgroundImage: `url(${import.meta.env.BASE_URL}img-1.jpeg)`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
