@@ -26,7 +26,7 @@ const Header = () => {
             Projects
           </a>
           <Link
-            to="/vaani-goenka/blog"
+            to="/blog"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Blog
