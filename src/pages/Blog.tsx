@@ -41,7 +41,7 @@ const Blog = () => {
             Blog
           </h1>
           <p className="font-body text-lg text-muted-foreground mb-12 max-w-2xl">
-            Thoughts on mathematics, logic, and the philosophy of computation.
+            I write about things I find interesting in order to understand them better!
           </p>
 
           <div className="grid gap-4 max-w-2xl">

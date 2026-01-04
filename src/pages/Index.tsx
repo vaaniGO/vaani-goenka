@@ -26,7 +26,8 @@ const Index = () => {
       <section className="py-16 md:py-20">
         <div className="container max-w-5xl mx-auto px-6">
           <div className="max-w-3xl animate-slide-up">
-            <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Vaani Goenka" />
+            <img src={`${import.meta.env.BASE_URL}profile.png`} alt="Vaani Goenka" className="w-48 h-58 md:w-56 md:h-66 object-cover mb-6" />
+
             <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 leading-tight">
               Vaani Goenka
             </h1>

@@ -11,7 +11,7 @@ export const previousProjects = [
     title: "End to End Encryption",
     description: "I explored SoTA E2EE encryption schemes and created a presentation as part of the Cryptography-1 course (Monsoon 2025). I have focused on the double ratchet system and also explored the PSI problem. The motive: Server cannot decrypt. Suppose Alice and Bob wish to exchange multiple messages over a server. Traditionally, server would decrypt and then re-encrypt and send it.",
     links: [
-      { url: "https://drive.google.com/file/d/example", title: "E2EE Presentation" }
+      { url: "https://drive.google.com/file/d/16VpMK0K0M0HlwHxSEADqd6tLRci3FhUQ/view?usp=sharing", title: "E2EE Presentation" }
     ]
   },
   {
