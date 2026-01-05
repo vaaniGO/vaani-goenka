@@ -82,7 +82,7 @@ const Index = () => {
       {/* Blog Section */}
       <Section id="blog">
         <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
-          Things I have not been able to get my head out of
+          Recently, I have been thinking about
         </h2>
         <div className="grid gap-4 max-w-2xl">
           {blogPosts.map((post) => (
