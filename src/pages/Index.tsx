@@ -46,7 +46,7 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  I am a second year student at Ashoka University studying Computer Science and Mathematics with a . I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
+                  I am a second year student at Ashoka University studying Computer Science and Mathematics with a 100% merit-based scholarship. I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
                   Apart from my research and academic interests, I enjoy building scalable systems to automate processes.
                 </p>
               </div>
