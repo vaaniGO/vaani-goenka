@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import Resume from "./pages/Resume";
+import Research from "./pages/Research";
 import { GridBackground } from './components/GridBackground';
 
 const queryClient = new QueryClient();
@@ -20,6 +22,8 @@ const App = () => (
       <BrowserRouter basename="/vaani-goenka">
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/research" element={<Research />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />

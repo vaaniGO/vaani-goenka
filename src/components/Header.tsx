@@ -26,6 +26,18 @@ const Header = () => {
             Projects
           </a>
           <Link
+            to="/research"
+            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Research
+          </Link>
+          <Link
+            to="/resume"
+            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Resume
+          </Link>
+          <Link
             to="/blog"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -35,7 +47,7 @@ const Header = () => {
           <div className="ml-2 pl-2 border-l border-border/50">
             <ThemeToggle />
           </div>
-        </nav>
+        </nav >
       </div >
     </header >
   );
