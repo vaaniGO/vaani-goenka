@@ -6,7 +6,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full">
       <div className="container max-w-5xl mx-auto px-6 h-16 flex items-center justify-between bg-background backdrop-blur-md">
         <Link
-          to="/vaani-goenka/"
+          to="/"
           className="font-display text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
           Vaani Goenka
@@ -14,13 +14,13 @@ const Header = () => {
 
         <nav className="flex items-center gap-6">
           <a
-            href="/vaani-goenka/#interests"
+            href="/#interests"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Interests
           </a>
           <a
-            href="/vaani-goenka/#projects"
+            href="/#projects"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects
