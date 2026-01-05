@@ -14,13 +14,13 @@ const Header = () => {
 
         <nav className="flex items-center gap-6">
           <a
-            href="/#interests"
+            href="/vaani-goenka/#interests"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Interests
           </a>
           <a
-            href="/#projects"
+            href="/vaani-goenka/#projects"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects
