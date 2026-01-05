@@ -6,7 +6,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full">
       <div className="container max-w-5xl mx-auto px-6 h-16 flex items-center justify-between bg-background backdrop-blur-md">
         <a
-          href="/"
+          href="/vaani-goenka/"
           className="font-display text-xl font-semibold text-foreground hover:text-primary transition-colors"
         >
           Vaani Goenka
