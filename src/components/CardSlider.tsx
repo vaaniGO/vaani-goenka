@@ -63,7 +63,7 @@ const CardSlider = ({ title, projects }: CardSliderProps) => {
       </div>
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide scroll-smooth"
+        className="flex gap-5 overflow-x-auto pb-4 scrollbar-hide scroll-smooth pt-2"
       >
         {projects.map((project, index) => (
           <ProjectCard

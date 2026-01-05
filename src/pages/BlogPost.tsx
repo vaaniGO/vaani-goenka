@@ -4,9 +4,41 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Section from '@/components/Section';
 import { getPostBySlug, type BlogPost as BlogPostType } from '@/client/queries';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ChevronRight } from 'lucide-react';
 import katex from 'katex';
 import 'katex/dist/katex.min.css';
+
+// Toggle Component
+interface BlogToggleProps {
+  title: string | JSX.Element | (string | JSX.Element)[];
+  children: JSX.Element[];
+}
+
+const BlogToggle = ({ title, children }: BlogToggleProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="my-4 rounded-lg ">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-start gap-2 text-left font-body text-foreground/90 
+                   hover:text-foreground transition-colors group p-2 rounded"
+      >
+        <ChevronRight
+          className={`h-5 w-5 mt-0.5 flex-shrink-0 transition-transform ${isOpen ? 'rotate-90' : ''
+            }`}
+        />
+        <span className="font-medium">{title}</span>
+      </button>
+
+      {isOpen && (
+        <div className="ml-7 mt-1 pb-2 px-2 space-y-2">
+          {children}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -86,12 +118,94 @@ const BlogPost = () => {
     return parts.length > 0 ? parts : [text];
   };
 
-  // Enhanced markdown-like rendering with LaTeX support
+  // Enhanced markdown-like rendering with LaTeX support and toggles
   const renderContent = (content: string) => {
     const lines = content.split('\n');
     const elements: JSX.Element[] = [];
+    let i = 0;
 
-    lines.forEach((line, index) => {
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Check for toggle syntax: > Toggle title
+      if (line.startsWith('> ')) {
+        const toggleTitle = processInlineMath(line.slice(2));
+        const toggleContent: JSX.Element[] = [];
+        i++; // Move to next line
+
+        // Collect indented content (lines starting with tab or 2+ spaces)
+        while (i < lines.length && (lines[i].startsWith('  ') || lines[i].startsWith('\t'))) {
+          const contentLine = lines[i].replace(/^(\s{2}|\t)/, ''); // Remove first indent
+
+          // Process the content line similar to regular content
+          if (contentLine.trim().startsWith('$$') && contentLine.trim().endsWith('$$')) {
+            const mathContent = contentLine.trim().slice(2, -2);
+            try {
+              const html = katex.renderToString(mathContent, {
+                displayMode: true,
+                throwOnError: false,
+              });
+              toggleContent.push(
+                <div
+                  key={i}
+                  className="my-4 text-center overflow-x-auto"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              );
+            } catch (e) {
+              console.error('KaTeX display error:', e);
+              toggleContent.push(
+                <div key={i} className="my-4 text-center">
+                  {mathContent}
+                </div>
+              );
+            }
+          } else if (contentLine.startsWith('### ')) {
+            toggleContent.push(
+              <h3 key={i} className="font-display text-lg font-semibold text-foreground mt-4 mb-2">
+                {processInlineMath(contentLine.slice(4))}
+              </h3>
+            );
+          } else if (contentLine.startsWith('## ')) {
+            toggleContent.push(
+              <h2 key={i} className="font-display text-xl font-semibold text-foreground mt-4 mb-2">
+                {processInlineMath(contentLine.slice(3))}
+              </h2>
+            );
+          } else if (contentLine.startsWith('# ')) {
+            toggleContent.push(
+              <h1 key={i} className="font-display text-2xl font-bold text-foreground mt-4 mb-2">
+                {processInlineMath(contentLine.slice(2))}
+              </h1>
+            );
+          } else if (contentLine.startsWith('*') && contentLine.endsWith('*') && !contentLine.startsWith('**')) {
+            toggleContent.push(
+              <p key={i} className="font-body text-lg text-muted-foreground italic my-2 text-justify">
+                {processInlineMath(contentLine.slice(1, -1))}
+              </p>
+            );
+          } else if (contentLine.trim() === '---') {
+            toggleContent.push(<hr key={i} className="my-4 border-border" />);
+          } else if (contentLine.trim() === '') {
+            toggleContent.push(<div key={i} className="h-2" />);
+          } else {
+            toggleContent.push(
+              <p key={i} className="font-body text-foreground/90 leading-relaxed my-2 text-justify">
+                {processInlineMath(contentLine)}
+              </p>
+            );
+          }
+          i++;
+        }
+
+        elements.push(
+          <BlogToggle key={`toggle-${i}`} title={toggleTitle}>
+            {toggleContent}
+          </BlogToggle>
+        );
+        continue; // Skip the i++ at the end since we've already moved
+      }
+
       // Check for display math ($$...$$)
       if (line.trim().startsWith('$$') && line.trim().endsWith('$$')) {
         const mathContent = line.trim().slice(2, -2);
@@ -102,7 +216,7 @@ const BlogPost = () => {
           });
           elements.push(
             <div
-              key={index}
+              key={i}
               className="my-6 text-center overflow-x-auto"
               dangerouslySetInnerHTML={{ __html: html }}
             />
@@ -110,7 +224,7 @@ const BlogPost = () => {
         } catch (e) {
           console.error('KaTeX display error:', e);
           elements.push(
-            <div key={index} className="my-6 text-center">
+            <div key={i} className="my-6 text-center">
               {mathContent}
             </div>
           );
@@ -119,19 +233,19 @@ const BlogPost = () => {
       // Headings
       else if (line.startsWith('# ')) {
         elements.push(
-          <h1 key={index} className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h1 key={i} className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             {processInlineMath(line.slice(2))}
           </h1>
         );
       } else if (line.startsWith('## ')) {
         elements.push(
-          <h2 key={index} className="font-display text-2xl font-semibold text-foreground mt-8 mb-4">
+          <h2 key={i} className="font-display text-2xl font-semibold text-foreground mt-8 mb-4">
             {processInlineMath(line.slice(3))}
           </h2>
         );
       } else if (line.startsWith('### ')) {
         elements.push(
-          <h3 key={index} className="font-display text-xl font-semibold text-foreground mt-6 mb-3">
+          <h3 key={i} className="font-display text-xl font-semibold text-foreground mt-6 mb-3">
             {processInlineMath(line.slice(4))}
           </h3>
         );
@@ -139,28 +253,30 @@ const BlogPost = () => {
       // Italic text
       else if (line.startsWith('*') && line.endsWith('*') && !line.startsWith('**')) {
         elements.push(
-          <p key={index} className="font-body text-lg text-muted-foreground italic my-4 text-justify">
+          <p key={i} className="font-body text-lg text-muted-foreground italic my-4 text-justify">
             {processInlineMath(line.slice(1, -1))}
           </p>
         );
       }
       // Horizontal rule
       else if (line.trim() === '---') {
-        elements.push(<hr key={index} className="my-8 border-border" />);
+        elements.push(<hr key={i} className="my-8 border-border" />);
       }
       // Empty line
       else if (line.trim() === '') {
-        elements.push(<div key={index} className="h-4" />);
+        elements.push(<div key={i} className="h-4" />);
       }
       // Regular paragraph
       else {
         elements.push(
-          <p key={index} className="font-body text-foreground/90 leading-relaxed my-4 text-justify">
+          <p key={i} className="font-body text-foreground/90 leading-relaxed my-4 text-justify">
             {processInlineMath(line)}
           </p>
         );
       }
-    });
+
+      i++;
+    }
 
     return elements;
   };
@@ -180,7 +296,7 @@ const BlogPost = () => {
             Back to blog
           </Link>
 
-          {/* TITLE - This was missing! */}
+          {/* Post Title */}
           <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-4">
             {post.title}
           </h1>
