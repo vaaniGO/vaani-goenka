@@ -34,7 +34,7 @@ const Index = () => {
                 className="w-48 h-58 md:w-56 md:h-66 object-cover mb-6"
               />
 
-              <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 leading-tight">
+              <h1 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
                 Vaani Goenka
               </h1>
             </div>
@@ -46,7 +46,7 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  I am a second year student at Ashoka University studying Computer Science and Mathematics. I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
+                  I am a second year student at Ashoka University studying Computer Science and Mathematics with a . I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
                   Apart from my research and academic interests, I enjoy building scalable systems to automate processes.
                 </p>
               </div>
@@ -77,20 +77,12 @@ const Index = () => {
         <Section>
           <CardSlider title="I am currently working on" projects={recentProjects} />
         </Section>
-
-        <Section>
-          <CardSlider title="Previously, I have worked on" projects={previousProjects} />
-        </Section>
-
-        <Section>
-          <CardSlider title="Development Projects" projects={developmentProjects} />
-        </Section>
       </div>
 
       {/* Blog Section */}
       <Section id="blog">
         <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
-          Recently, I have been thinking about
+          Things I have not been able to get my head out of
         </h2>
         <div className="grid gap-4 max-w-2xl">
           {blogPosts.map((post) => (

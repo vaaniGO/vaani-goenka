@@ -9,6 +9,8 @@ import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Resume from "./pages/Resume";
 import Research from "./pages/Research";
+import Projects from "./pages/Projects";
+import Teaching from "./pages/Teaching";
 import { GridBackground } from './components/GridBackground';
 
 const queryClient = new QueryClient();
@@ -24,7 +26,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/teaching" element={<Teaching />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,8 +1,16 @@
+import { link } from "fs";
+
 export const recentProjects = [
   {
     title: "BOOP: A tool for writing correct-by-construction programs",
     description: "Your code can work, but what does it mean for your code to be correct? I explore this question in a pedagogical context in my research with Prof. Aalok Thakkar. Conventional CS education relies on student-authored programs as proxy for their computational thinking. We attempt to strip these proxies, providing learners with a better way of constructing their programs, prioritising correctness and mathematical reasoning.",
     links: []
+  },
+  {
+    title: "Mailroom Automation System & Inventory Auomation System",
+    description: "As Deputy Minister of the Ministry of Technology of my college, I lead 2 digitisation projects that are now in use by 5000+ people: the Mailroom and the Sports Inventory.",
+    links: [
+      { url: "https://vaanigo.github.io/vaani-goenka/projects/#Mailroom", title: "Read More" }]
   }
 ];
 
@@ -51,12 +59,6 @@ export const developmentProjects = [
     links: [
       { url: "https://github.com/vaaniGO/Bill-Split-App", title: "Bill-Split-App" }
     ]
-  },
-  {
-    title: "Mailroom Automation & Inventory Digitisation",
-    description: "As Deputy Minister of the Ministry of Technology of my college, I led 2 digitisation projects that are now in use by 5000+ people: the Mailroom and the Sports Inventory.",
-    links: [],
-    note: "Code, links are institution-only"
   },
   {
     title: "Ashoka University Students' Platform",

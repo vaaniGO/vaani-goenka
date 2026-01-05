@@ -13,12 +13,12 @@ const Header = () => {
         </a>
 
         <nav className="flex items-center gap-6">
-          <a
-            href="/vaani-goenka/#projects"
+          <Link
+            to="/projects"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Projects
-          </a>
+          </Link>
           <Link
             to="/research"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -30,6 +30,12 @@ const Header = () => {
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             Resume
+          </Link>
+          <Link
+            to="/teaching"
+            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Teaching
           </Link>
           <Link
             to="/blog"
