@@ -27,7 +27,7 @@ const Projects = () => {
                                         Discrete Mathematics
                                     </p>
                                     <p className="font-body text-sm text-muted-foreground">
-                                        <a
+                                        Taught by <a
                                             href="https://gauravbhatnagar.org/"
                                             className="text-primary hover:text-primary/80 transition-colors"
                                             target="_blank"
@@ -61,7 +61,7 @@ const Projects = () => {
                                         Introduction to Modern Cryptography
                                     </p>
                                     <p className="font-body text-sm text-muted-foreground">
-                                        <a
+                                        Taught by <a
                                             href="https://sites.google.com/site/homeofmahavir/Home"
                                             className="text-primary hover:text-primary/80 transition-colors"
                                             target="_blank"
@@ -78,7 +78,7 @@ const Projects = () => {
                                         Problem-Solving Group
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
-                                        <a
+                                        Taught by <a
                                             href="https://web.iitd.ac.in/~atripath/"
                                             className="text-primary hover:text-primary/80 transition-colors"
                                             target="_blank"
@@ -95,7 +95,7 @@ const Projects = () => {
                                         Linear Algebra
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
-                                        <a
+                                        Taught by <a
                                             href="https://sites.google.com/view/sagar-shrivastava/home"
                                             className="text-primary hover:text-primary/80 transition-colors"
                                             target="_blank"
@@ -112,7 +112,7 @@ const Projects = () => {
                                         Graph Theory & Combinatorics
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
-                                        Archana Kumari, Surabhi (PhD Students, IIT Delhi)
+                                        Taught by Archana Kumari, Surabhi (PhD Students, IIT Delhi)
                                     </p>
                                 </div>
                             </div>

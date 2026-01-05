@@ -79,27 +79,6 @@ const Index = () => {
         </Section>
       </div>
 
-      {/* Blog Section */}
-      <Section id="blog">
-        <h2 className="font-display text-3xl font-semibold text-foreground mb-8">
-          Recently, I have been thinking about
-        </h2>
-        <div className="grid gap-4 max-w-2xl">
-          {blogPosts.map((post) => (
-            <BlogCard
-              key={post._id}
-              slug={post.slug.current}
-              title={post.title}
-              excerpt={post.excerpt}
-              date={new Date(post.publishedAt).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long'
-              })}
-            />
-          ))}
-        </div>
-      </Section>
-
       <Footer />
     </div>
   );
