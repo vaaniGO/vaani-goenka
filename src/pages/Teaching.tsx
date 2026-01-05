@@ -74,7 +74,7 @@ const Projects = () => {
 
                                 {/* Problem-Solving Group */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                                    <h3 className="font-display text-lg text-foreground mb-2">
                                         Problem-Solving Group
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
@@ -91,7 +91,7 @@ const Projects = () => {
 
                                 {/* Linear Algebra */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                                    <h3 className="font-display text-lg text-foreground mb-2">
                                         Linear Algebra
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
@@ -108,7 +108,7 @@ const Projects = () => {
 
                                 {/* Graph Theory & Combinatorics */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+                                    <h3 className="font-display text-lg text-foreground mb-2">
                                         Graph Theory & Combinatorics
                                     </h3>
                                     <p className="font-body text-sm text-muted-foreground">
