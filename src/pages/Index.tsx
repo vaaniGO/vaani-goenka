@@ -24,10 +24,10 @@ const Index = () => {
 
       {/* Hero Section with Interests */}
       <section className="py-16 md:py-20">
-        <div className="container max-w-5xl mx-auto px-6">
+        <div className="container max-w-5xl mx-auto pl-12 pr-6">
           <div className="flex flex-col md:flex-row gap-12 md:gap-16">
             {/* Left Column - Hero */}
-            <div className="md:w-2/5">
+            <div className="md:w-2/5 flex flex-col pl-6 md:pl-12">
               <img
                 src={`${import.meta.env.BASE_URL}profile.png`}
                 alt="Vaani Goenka"

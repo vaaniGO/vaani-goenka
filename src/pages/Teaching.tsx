@@ -74,9 +74,9 @@ const Projects = () => {
 
                                 {/* Problem-Solving Group */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg text-foreground mb-2">
+                                    <p className="font-body text-base text-muted-foreground mb-1">
                                         Problem-Solving Group
-                                    </h3>
+                                    </p>
                                     <p className="font-body text-sm text-muted-foreground">
                                         Taught by <a
                                             href="https://web.iitd.ac.in/~atripath/"
@@ -91,9 +91,9 @@ const Projects = () => {
 
                                 {/* Linear Algebra */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg text-foreground mb-2">
+                                    <p className="font-body text-base text-muted-foreground mb-1">
                                         Linear Algebra
-                                    </h3>
+                                    </p>
                                     <p className="font-body text-sm text-muted-foreground">
                                         Taught by <a
                                             href="https://sites.google.com/view/sagar-shrivastava/home"
@@ -108,9 +108,9 @@ const Projects = () => {
 
                                 {/* Graph Theory & Combinatorics */}
                                 <div className="border-l-2 border-primary pl-6">
-                                    <h3 className="font-display text-lg text-foreground mb-2">
+                                    <p className="font-body text-base text-muted-foreground mb-1">
                                         Graph Theory & Combinatorics
-                                    </h3>
+                                    </p>
                                     <p className="font-body text-sm text-muted-foreground">
                                         Taught by Archana Kumari, Surabhi (PhD Students, IIT Delhi)
                                     </p>
