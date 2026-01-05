@@ -14,12 +14,6 @@ const Header = () => {
 
         <nav className="flex items-center gap-6">
           <a
-            href="/vaani-goenka/#interests"
-            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Interests
-          </a>
-          <a
             href="/vaani-goenka/#projects"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
