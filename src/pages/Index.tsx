@@ -29,7 +29,7 @@ const Index = () => {
             {/* Left Column - Hero */}
             <div className="md:w-2/5 flex flex-col pl-6 md:pl-12">
               <img
-                src={`${import.meta.env.BASE_URL}profile.PNG`}
+                src={`${import.meta.env.BASE_URL}profile.png`}
                 alt="Vaani Goenka"
                 className="w-48 h-58 md:w-56 md:h-66 object-cover mb-6"
               />
