@@ -29,7 +29,7 @@ const Index = () => {
             {/* Left Column - Hero */}
             <div className="md:w-2/5 flex flex-col pl-6 md:pl-12">
               <img
-                src={`${import.meta.env.BASE_URL}profile.png`}
+                src={`${import.meta.env.BASE_URL}profile.PNG`}
                 alt="Vaani Goenka"
                 className="w-48 h-58 md:w-56 md:h-66 object-cover mb-6"
               />
@@ -46,7 +46,7 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  I am a second year student at Ashoka University studying Computer Science and Mathematics with a 100% merit-based scholarship. I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
+                  I am a second year student at Ashoka University studying Computer Science and Mathematics with a full scholarship. I am currently working with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> to reassert a correctness-first scientific approach to Computer Science.
                   Apart from my research and academic interests, I enjoy building scalable systems to automate processes.
                 </p>
               </div>
