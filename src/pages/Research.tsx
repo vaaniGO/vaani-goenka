@@ -22,7 +22,6 @@ const Research = () => {
                         <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
                             My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
                         </p>
-
                         {/* VS Code Extension Button */}
                         <div className="mt-4">
                             <a
@@ -43,6 +42,11 @@ const Research = () => {
                                 Walkthrough
                             </a>
                         </div>
+
+
+                        <h3 className='mt-10 mb-2'>Publications</h3>
+                        <p>Goenka, V., Thakkar, A. (2026). BOOP: Write Right Code. In: Prasad, P., Raman, A., Shah, B. (eds) Computing Education Research . COMPUTE 2025. Communications in Computer and Information Science, vol 2739. Springer, Cham. <a href="https://doi.org/10.1007/978-3-032-14583-3_7">https://doi.org/10.1007/978-3-032-14583-3_7</a></p>
+
                     </div>
 
 

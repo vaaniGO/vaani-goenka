@@ -6,6 +6,7 @@ import InterestTag from '@/components/InterestTag';
 import CardSlider from '@/components/CardSlider';
 import BlogCard from '@/components/BlogCard';
 import { interests } from '@/data/interests';
+import { Github, Linkedin, Code2 } from 'lucide-react';
 import { recentProjects, previousProjects, developmentProjects } from '@/data/projects';
 import { getAllPosts, type BlogPost } from '@/client/queries';
 
@@ -70,17 +71,17 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Projects Section */}
-      <div id="projects">
+      < div id="projects" >
         <Section>
           <CardSlider title="I am currently working on" projects={recentProjects} />
         </Section>
-      </div>
+      </div >
 
       <Footer />
-    </div>
+    </div >
   );
 };
 
