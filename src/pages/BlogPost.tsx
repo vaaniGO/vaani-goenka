@@ -266,6 +266,23 @@ const BlogPost = () => {
       else if (line.trim() === '') {
         elements.push(<div key={i} className="h-4" />);
       }
+
+      // Add this in your renderContent function, in the while loop with the other conditions
+      // Check for images ![alt](url)
+      else if (line.match(/^!\[.*?\]\(.*?\)/)) {
+        const match = line.match(/!\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          const [, alt, url] = match;
+          elements.push(
+            <img
+              key={i}
+              src={url}
+              alt={alt}
+              className="my-6 rounded-lg max-w-full h-auto"
+            />
+          );
+        }
+      }
       // Regular paragraph
       else {
         elements.push(
