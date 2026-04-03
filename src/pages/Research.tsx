@@ -21,6 +21,9 @@ const Research = () => {
                     <div className="mb-6">
                         <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
                             My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
+                            <br></br><br></br>
+                            <p>Our paper has also been accepted at ITiCSE 2026.</p>
+                            <p>Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).</p>
                         </p>
                         {/* VS Code Extension Button */}
                         <div className="mt-4">
