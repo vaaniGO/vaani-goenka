@@ -31,6 +31,14 @@ const Footer = () => {
             >
               LeetCode
             </a>
+            <a
+              href="https://vaanigo2006.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              Substack
+            </a>
           </div>
         </div>
       </div>

@@ -15,6 +15,30 @@ const Projects = () => {
 
                     <div className="space-y-12 max-w-3xl">
 
+                        <div>
+                            <p className="font-body text-lg font-semibold text-foreground mb-6">
+                                Spring 2026
+                            </p>
+                            <div className="space-y-6">
+                                {/* Discrete Mathematics */}
+                                <div className="border-l-2 border-primary pl-6">
+                                    <p className="font-body text-base text-muted-foreground mb-1">
+                                        Discrete Mathematics
+                                    </p>
+                                    <p className="font-body text-sm text-muted-foreground">
+                                        Taught by <a
+                                            href="https://www.ashoka.edu.in/profile/partha-pratim-das/"
+                                            className="text-primary hover:text-primary/80 transition-colors"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Prof. Partha Pratim Das
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Monsoon 2025 */}
                         <div>
                             <p className="font-body text-lg font-semibold text-foreground mb-6">
