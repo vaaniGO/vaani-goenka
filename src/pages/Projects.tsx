@@ -79,7 +79,7 @@ const Projects = () => {
 
             <section className="py-16 md:py-20">
                 <div className="container max-w-5xl mx-auto px-6">
-                    <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+                    <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
                         Projects
                     </h1>
 

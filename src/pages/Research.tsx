@@ -13,17 +13,31 @@ const Research = () => {
             <Header />
 
             <Section>
-                <div className="max-w-4xl mx-auto">
                     <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
                         Research
                     </h1>
 
-                    <div className="mb-6">
+                    <h2 className="mb-1">Mean-Payoff Games</h2>
+                    <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Shibashis Guha, Tata Institute of Fundamental Research</h5>
+                    <div className="mb-8">
+                        <p className="font-body text-base text-muted-foreground leading-relaxed">
+                            Among the reward functions we can have on Markoc Decision Processes, one is a mean-payoff i.e. looking at the average in the limit.
+                            We may want to provide some guarantees about the payoff, and associate with them probabilities of success. I worked on "Sure-Alomst-Sure" Mean-Payoff, that is,
+                            we want to satisfy a sure objective and an almost-sure objective simultaneously.
+                        </p>
+                    </div>
+
+                    <h2 className="mt-8 mb-1">Program Correctness</h2>
+                    <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Aalok Thakkar, Ashoka University</h5>
+                    <div className="mb-8">
                         <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
                             My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
-                            <br></br><br></br>
-                            <p>Our paper has also been accepted at ITiCSE 2026.</p>
-                            <p>Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).</p>
+                        </p>
+                        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
+                            Our paper has also been accepted at ITiCSE 2026.
+                        </p>
+                        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
+                            Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).
                         </p>
                         {/* VS Code Extension Button */}
                         <div className="mt-4">
@@ -31,7 +45,7 @@ const Research = () => {
                                 href={vscodeExtensionUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white font-body text-sm rounded-md hover:bg-primary/90 transition-colors shadow-sm"
+                                className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
                             >
                                 VS Code Extension
                             </a>
@@ -40,7 +54,7 @@ const Research = () => {
                                 href={boopURL}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="ml-5 inline-flex items-center gap-2 px-4 py-2 bg-primary text-white font-body text-sm rounded-md hover:bg-primary/90 transition-colors shadow-sm"
+                                className="ml-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
                             >
                                 Walkthrough
                             </a>
@@ -88,8 +102,7 @@ const Research = () => {
                             Download PDF
                         </a>
                     </div>
-                </div >
-            </Section >
+            </Section>
 
             <Footer />
         </div >

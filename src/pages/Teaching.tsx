@@ -8,12 +8,40 @@ const Projects = () => {
 
             <section className="py-16 md:py-20">
                 <div className="container max-w-5xl mx-auto px-6">
-                    <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+                    <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
                         Teaching
                     </h1>
-                    <p className="mb-10">I have been a Teaching Assistant in the following courses.</p>
+                    <p className="mb-10">I have been a Teaching Assistant in the following courses:</p>
 
                     <div className="space-y-12 max-w-3xl">
+
+                        {/* Monsoon 2026 */}
+                        <div>
+                            <p className="font-body text-lg font-semibold text-foreground mb-6">
+                                Monsoon 2026
+                            </p>
+                            <div className="space-y-6">
+                                {/* Discrete Mathematics */}
+                                <div className="border-l-2 border-primary pl-6">
+                                    <p className="font-body text-base text-muted-foreground mb-1">
+                                        Data Structures and Algorithms
+                                    </p>
+                                    <p className="font-body text-sm text-muted-foreground">
+                                        Taught by <a
+                                            href="https://aalok-thakkar.github.io/"
+                                            className="text-primary hover:text-primary/80 transition-colors"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            Prof. Aalok Thakkar
+                                        </a>
+                                        <br></br><br></br>
+                                        Course website | A curated problem set
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
 
                         <div>
                             <p className="font-body text-lg font-semibold text-foreground mb-6">
