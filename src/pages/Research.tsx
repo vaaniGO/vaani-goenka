@@ -13,95 +13,98 @@ const Research = () => {
             <Header />
 
             <Section>
-                    <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-                        Research
-                    </h1>
+                <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+                    Research
+                </h1>
 
-                    <h2 className="mb-1">Mean-Payoff Games</h2>
-                    <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Shibashis Guha, Tata Institute of Fundamental Research</h5>
-                    <div className="mb-8">
-                        <p className="font-body text-base text-muted-foreground leading-relaxed">
-                            Among the reward functions we can have on Markoc Decision Processes, one is a mean-payoff i.e. looking at the average in the limit.
-                            We may want to provide some guarantees about the payoff, and associate with them probabilities of success. I worked on "Sure-Alomst-Sure" Mean-Payoff, that is,
-                            we want to satisfy a sure objective and an almost-sure objective simultaneously.
-                        </p>
-                    </div>
+                <h2 className="mb-1">Mean-Payoff Games</h2>
+                <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Shibashis Guha, Tata Institute of Fundamental Research</h5>
+                <div className="mb-8">
+                    <p className="font-body text-base text-muted-foreground leading-relaxed">
+                        Among the reward functions we can have on Markoc Decision Processes, one is a mean-payoff i.e. looking at the average in the limit.
+                        We may want to provide some guarantees about the payoff, and associate with them probabilities of success. I worked on "Sure-Alomst-Sure" Mean-Payoff, that is,
+                        we want to satisfy a sure objective and an almost-sure objective simultaneously.
+                    </p>
+                </div>
 
-                    <h2 className="mt-8 mb-1">Program Correctness</h2>
-                    <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Aalok Thakkar, Ashoka University</h5>
-                    <div className="mb-8">
-                        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                            My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
-                        </p>
-                        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                            Our paper has also been accepted at ITiCSE 2026.
-                        </p>
-                        <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                            Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).
-                        </p>
-                        {/* VS Code Extension Button */}
-                        <div className="mt-4">
-                            <a
-                                href={vscodeExtensionUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
-                            >
-                                VS Code Extension
-                            </a>
-
-                            <a
-                                href={boopURL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="ml-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
-                            >
-                                Walkthrough
-                            </a>
-                        </div>
-
-
-                        <h3 className='mt-10 mb-2'>Publications</h3>
-                        <p>Goenka, V., Thakkar, A. (2026). BOOP: Write Right Code. In: Prasad, P., Raman, A., Shah, B. (eds) Computing Education Research . COMPUTE 2025. Communications in Computer and Information Science, vol 2739. Springer, Cham. <a href="https://doi.org/10.1007/978-3-032-14583-3_7">https://doi.org/10.1007/978-3-032-14583-3_7</a></p>
-
-                    </div>
-
-
-
-                    {/* PDF Viewer */}
-                    <div className="w-full border border-border rounded-lg overflow-hidden bg-card shadow-sm">
-                        <iframe
-                            src={pdfUrl}
-                            className="w-full h-[800px]"
-                            title="Research Paper"
-                        />
-                    </div>
-
-                    {/* Download Link */}
-                    <div className="mt-6 text-center">
+                <h2 className="mt-8 mb-1">Program Correctness</h2>
+                <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Aalok Thakkar, Ashoka University</h5>
+                <div className="mb-8">
+                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
+                        My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
+                    </p>
+                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
+                        Our paper has also been accepted at ITiCSE 2026.
+                    </p>
+                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
+                        Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).
+                    </p>
+                    {/* VS Code Extension Button */}
+                    <div className="mt-4">
                         <a
-                            href={pdfUrl}
-                            download
-                            className="inline-flex items-center gap-2 font-body text-sm text-primary hover:text-primary/80 transition-colors"
+                            href={vscodeExtensionUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
                         >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="16"
-                                height="16"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                <polyline points="7 10 12 15 17 10" />
-                                <line x1="12" y1="15" x2="12" y2="3" />
-                            </svg>
-                            Download PDF
+                            VS Code Extension
+                        </a>
+
+                        <a
+                            href={boopURL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary text-white font-body text-xs rounded-md hover:bg-primary/90 transition-colors shadow-sm"
+                        >
+                            Walkthrough
                         </a>
                     </div>
+
+
+                    <h3 className='mt-10 mb-2'>Publications</h3>
+                    <p>Goenka, V., Thakkar, A. (2026). BOOP: Write Right Code. In: Prasad, P., Raman, A., Shah, B. (eds) Computing Education Research . COMPUTE 2025. Communications in Computer and Information Science, vol 2739. Springer, Cham. <a href="https://doi.org/10.1007/978-3-032-14583-3_7">https://doi.org/10.1007/978-3-032-14583-3_7</a></p>
+                    <br>
+                    </br>
+                    <p>Vaani Goenka and Aalok Thakkar. 2026. A Correctness-First Introduction to Computer Science. In Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education V. 1 (ITiCSE 2026). Association for Computing Machinery, New York, NY, USA, 345–351. https://doi.org/10.1145/3803400.3809367</p>
+
+                </div>
+
+
+
+                {/* PDF Viewer */}
+                <div className="w-full border border-border rounded-lg overflow-hidden bg-card shadow-sm">
+                    <iframe
+                        src={pdfUrl}
+                        className="w-full h-[800px]"
+                        title="Research Paper"
+                    />
+                </div>
+
+                {/* Download Link */}
+                <div className="mt-6 text-center">
+                    <a
+                        href={pdfUrl}
+                        download
+                        className="inline-flex items-center gap-2 font-body text-sm text-primary hover:text-primary/80 transition-colors"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download PDF
+                    </a>
+                </div>
             </Section>
 
             <Footer />
