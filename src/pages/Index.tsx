@@ -38,6 +38,7 @@ const Index = () => {
               <h1 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-3 leading-tight">
                 Vaani Goenka
               </h1>
+              <h6 className='font-light'>vaani.goenka_ug2024  @ ashoka.edu.in</h6>
             </div>
 
             {/* Right Column - About Me & Interests */}
@@ -47,8 +48,8 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  I am a third year student at Ashoka University studying Computer Science and Mathematics with a full scholarship. I am currently working on Games on Graphs. I am interested in Algorithms, Theory of Computation, and Cryptography.
-                  Apart from my research and academic interests, I enjoy building scalable systems to automate processes.
+                  I am a third year student at Ashoka University studying Computer Science and Mathematics with a full scholarship. I am soon joining <a href="https://www.cerify.ai/" className='text-blue-500'> Cerify</a> at IIT-Delhi as an intern.
+                  Previously, I have worked on program correctness, and model-checking in MDPs.
                 </p>
               </div>
 
@@ -74,11 +75,14 @@ const Index = () => {
       </section >
 
       {/* Projects Section */}
-      < div id="projects" >
+      {/* < div id="projects" >
         <Section>
           <CardSlider title="I am currently working on" projects={recentProjects} />
         </Section>
-      </div >
+      </div > */}
+      <div className='mb-40 mt-10'>
+
+      </div>
 
       <Footer />
     </div >

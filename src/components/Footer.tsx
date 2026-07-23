@@ -15,30 +15,6 @@ const Footer = () => {
             </a>, a Bengali artist whose finesse continues to inspire.
           </p>
           <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/vaaniGO"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://leetcode.com/u/VaaniGO/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              LeetCode
-            </a>
-            <a
-              href="https://vaanigo2006.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              Substack
-            </a>
           </div>
         </div>
       </div>

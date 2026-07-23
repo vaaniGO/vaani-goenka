@@ -36,7 +36,7 @@ const Projects = () => {
                                             Prof. Aalok Thakkar
                                         </a>
                                         <br></br><br></br>
-                                        Course website | A curated problem set
+                                        <a href="https://aalok-thakkar.github.io/teaching/monsoon2026/dsa/index.html" className="text-blue-500">Course website</a> | <a href="https://south-lizard-7e0.notion.site/Data-Structures-and-Algorithms-2026-A-curated-problem-set-3a615426f82c8029b656fa1c738ac4ed" className="text-blue-500"> A curated problem set</a>
                                     </p>
 
                                 </div>

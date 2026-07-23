@@ -14,6 +14,13 @@ const Header = () => {
 
         <nav className="flex items-center gap-6">
           <Link
+            to="/"
+          >
+            <span className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Home
+            </span>
+          </Link>
+          <Link
             to="/projects"
             className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
@@ -43,6 +50,20 @@ const Header = () => {
           >
             Blog
           </Link>
+
+          <a
+            href="https://github.com/vaanigo"
+            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+            GitHub
+          </a>
+
+          <a
+            href="https://substack.com/@vaanigo2006"
+            className="font-body text-sm text-muted-foreground hover:text-foreground transition-colors">
+            Substack
+          </a>
+
+
 
           <div className="ml-2 pl-2 border-l border-border/50">
             <ThemeToggle />
