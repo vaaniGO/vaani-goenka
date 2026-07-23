@@ -25,19 +25,19 @@ const Research = () => {
                         We may want to provide some guarantees about the payoff, and associate with them probabilities of success. I worked on "Sure-Alomst-Sure" Mean-Payoff, that is,
                         we want to satisfy a sure objective and an almost-sure objective simultaneously.
                     </p>
+                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4 mt-4">
+                        We will be presenting our work at the YR-CONCUR 2026 Workshop.
+                    </p>
                 </div>
 
-                <h2 className="mt-8 mb-1">Program Correctness</h2>
+                <h2 className="mt-12 mb-1">Program Correctness</h2>
                 <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Aalok Thakkar, Ashoka University</h5>
                 <div className="mb-8">
                     <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                        My research with <a href="https://aalok-thakkar.github.io/" className='text-primary'> Prof. Aalok Thakkar </a> aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
+                        My research aims to reassert a correctness-first practice of computer science in pedagogical context. We introduce BOOP, a tool to systematically derive a correct implementation from mathematical reasoning given a problem statement.
                     </p>
                     <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                        Our paper has also been accepted at ITiCSE 2026.
-                    </p>
-                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4">
-                        Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka).
+                        Recently, I was awarded the Ashoka Women in STEM Grant (given to 5 undergraduate female researchers at Ashoka) for this work.
                     </p>
                     {/* VS Code Extension Button */}
                     <div className="mt-4">
@@ -61,11 +61,13 @@ const Research = () => {
                     </div>
 
 
-                    <h3 className='mt-10 mb-2'>Publications</h3>
-                    <p>Goenka, V., Thakkar, A. (2026). BOOP: Write Right Code. In: Prasad, P., Raman, A., Shah, B. (eds) Computing Education Research . COMPUTE 2025. Communications in Computer and Information Science, vol 2739. Springer, Cham. <a href="https://doi.org/10.1007/978-3-032-14583-3_7">https://doi.org/10.1007/978-3-032-14583-3_7</a></p>
+                    <h3 className='mt-14 mb-2'>Publications</h3>
+                    <p>Goenka, V., Thakkar, A. (2026). BOOP: Write Right Code. In: Prasad, P., Raman, A., Shah, B. (eds) Computing Education Research . COMPUTE 2025. Communications in Computer and Information Science, vol 2739. Springer, Cham.
+                        <a href="https://doi.org/10.1007/978-3-032-14583-3_7" className="text-blue-500"> https://doi.org/10.1007/978-3-032-14583-3_7 </a></p>
                     <br>
                     </br>
-                    <p>Vaani Goenka and Aalok Thakkar. 2026. A Correctness-First Introduction to Computer Science. In Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education V. 1 (ITiCSE 2026). Association for Computing Machinery, New York, NY, USA, 345–351. https://doi.org/10.1145/3803400.3809367</p>
+                    <p>Vaani Goenka and Aalok Thakkar. 2026. A Correctness-First Introduction to Computer Science. In Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education V. 1 (ITiCSE 2026). Association for Computing Machinery, New York, NY, USA, 345–351.
+                        <a href="https://doi.org/10.1145/3803400.3809367" className="text-blue-500"> https://doi.org/10.1145/3803400.3809367</a></p>
 
                 </div>
 
