@@ -79,43 +79,65 @@ const BlogPost = () => {
   // Process inline math ($...$) in text
   const processInlineMath = (text: string): (string | JSX.Element)[] => {
     const parts: (string | JSX.Element)[] = [];
+
+    // Matches either:
+    //   $...$                (inline math)
+    //   [text](url)          (markdown links)
+    const regex = /\$([^\$]+)\$|\[([^\]]+)\]\(([^)]+)\)/g;
+
     let lastIndex = 0;
-    const regex = /\$([^\$]+)\$/g;
-    let match;
     let key = 0;
+    let match;
 
     while ((match = regex.exec(text)) !== null) {
-      // Add text before the math
+      // Plain text before this match
       if (match.index > lastIndex) {
         parts.push(text.substring(lastIndex, match.index));
       }
 
-      // Render inline math immediately with KaTeX
-      try {
-        const html = katex.renderToString(match[1], {
-          displayMode: false,
-          throwOnError: false,
-        });
+      // Inline math
+      if (match[1]) {
+        try {
+          const html = katex.renderToString(match[1], {
+            displayMode: false,
+            throwOnError: false,
+          });
+
+          parts.push(
+            <span
+              key={key++}
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          );
+        } catch {
+          parts.push(<span key={key++}>{match[1]}</span>);
+        }
+      }
+
+      // Markdown link
+      else if (match[2] && match[3]) {
         parts.push(
-          <span
+          <a
             key={key++}
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+            href={match[3]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline hover:opacity-80"
+          >
+            {match[2]}
+          </a>
         );
-      } catch (e) {
-        console.error('KaTeX error:', e);
-        parts.push(<span key={key++}>{match[1]}</span>);
       }
 
       lastIndex = regex.lastIndex;
     }
 
-    // Add remaining text
+    // Remaining text
     if (lastIndex < text.length) {
       parts.push(text.substring(lastIndex));
     }
 
-    return parts.length > 0 ? parts : [text];
+    return parts.length ? parts : [text];
   };
 
   // Enhanced markdown-like rendering with LaTeX support and toggles
