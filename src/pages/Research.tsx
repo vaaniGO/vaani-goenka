@@ -17,15 +17,11 @@ const Research = () => {
                     Research
                 </h1>
 
-                <h2 className="mb-1">Mean-Payoff Games</h2>
+                <h2 className="mb-1">Reactive Synthesis for Probabilistic Systems</h2>
                 <h5 className="mb-4 text-sm font-normal text-muted-foreground">Prof. Shibashis Guha, Tata Institute of Fundamental Research</h5>
                 <div className="mb-8">
                     <p className="font-body text-base text-muted-foreground leading-relaxed">
-                        Among the reward functions we can have on Markoc Decision Processes, one is a mean-payoff i.e. looking at the average in the limit.
-                        We may want to provide some guarantees about the payoff, and associate with them probabilities of success. I worked on "Sure-Alomst-Sure" Mean-Payoff, that is,
-                        we want to satisfy a sure objective and an almost-sure objective simultaneously.
-                    </p>
-                    <p className="font-body text-base text-muted-foreground leading-relaxed mb-4 mt-4">
+                        Mean-payoff objectives on Markov decision processes measure the long-run average reward along a run. I worked on sure–almost-sure mean-payoff: finding a strategy that keeps the mean-payoff above one threshold on every run while reaching a higher threshold with probability 1.
                         We will be presenting our work at the YR-CONCUR 2026 Workshop.
                     </p>
                 </div>
