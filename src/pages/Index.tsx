@@ -48,8 +48,8 @@ const Index = () => {
                   About Me
                 </h2>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
-                  I am a third year student at Ashoka University studying Computer Science and Mathematics with a full scholarship. I am soon joining <a href="https://www.cerify.ai/" className='text-blue-500'> Cerify</a> at IIT-Delhi as an intern.
-                  Previously, I have worked on program correctness, and model-checking in MDPs.
+                  I am a third year student at Ashoka University studying Computer Science and Mathematics with a full scholarship.
+                  I am currently working in String Transducers. Previously, I have worked in Program Correctness and Reactive Synthesis.
                 </p>
               </div>
 
